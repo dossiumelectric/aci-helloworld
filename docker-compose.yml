@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: myrgacr01.azurecr.io/aci-helloworld:v1
+    ports:
+      - "80:80"
+  redis:
+    image: redis:latest
+    environment:
+      - REDIS_PASSWORD=yourpassword
